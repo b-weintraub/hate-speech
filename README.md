@@ -1,6 +1,6 @@
 # Predicting hate crimes using machine learning and natural language processing
 
-<a href="https://github.com/b-weintraub">Ben Weintraub</a>
+<a href="https://www.linkedin.com/in/benweintraub-phd/">LinkedIn profile</a>
 
 <a href="https://drive.google.com/open?id=1rgvkDE_13-l8qSbqcyUc2tsTnqDiLRcV77_3_jlWKC4"> Link to slide deck presentation</a>
 
@@ -23,17 +23,17 @@ In this study, a machine learning classifier model is developed to identify onli
 
 Hate crimes have reached alarmingly high levels in the US over the past couple years.  The U.S. Department of Justice defines a hate crime as a “criminal offense against a person or property, motivated in whole or in part by an offender’s bias against a race, religion, disability, sexual orientation, ethnicity, gender, or gender identity.”  Hate speech, as defined by the Cambridge dictionary, is "public speech that expresses hate or encourages violence towards a person or group based on something such as race, religion, sex, or sexual orientation".  In this study, we look at the relationship between online hate speech and hate crimes.  
 
-The Pittsburgh synagogue shooting was a mass shooting that took place on October 27, 2018 killing 11 people. The gunman, Robert Bowers had earlier posted anti-Semitic comments against HIAS (formerly, Hebrew Immigrant Aid Society) on the online social network Gab.  The congregation had participated in HIAS's National Refugee Shabbat the previous week.  A couple hours before the mass shooting, Bowers posted to Gab the following, “HIAS likes to bring invaders in that kill our people.  I can’t sit by and watch my people get slaughtered. Screw your optics.  I’m going in.”  This brings up the questions - Can online hate speech be used to predict hate crimes?
+The Pittsburgh synagogue shooting was a mass shooting that took place on October 27, 2018 killing 11 people. The gunman, Robert Bowers had earlier posted anti-Semitic comments against HIAS (formerly, Hebrew Immigrant Aid Society) on the online social network Gab.  The congregation had participated in HIAS's National Refugee Shabbat the previous week.  A couple hours before the mass shooting, Bowers posted to Gab the following, “HIAS likes to bring invaders in that kill our people.  I can’t sit by and watch my people get slaughtered. Screw your optics.  I’m going in.”  Because Bowers posted his intentions online in the form of hate speech, this brings up the question - Can online hate speech be used to predict hate crimes?
 
 ## Dataset
 
-To explore this question, data was collected from social media site Gab.com. Started in 2016, Gab describes itself as a "free speech" alternative to Twitter and Facebook.  Attracts groups banned from other social networks and is known as safe haven for extremists including neo-Nazis and white supremacists.
+To explore this question, data was collected from social media site Gab.com. Started in 2016, Gab describes itself as a "free speech" alternative to Twitter and Facebook.  It attracts groups banned from other social networks and is known as a safe haven for extremists including neo-Nazis and white supremacists.
 
 Gab data was collected from a variety of sources including the Gab pushshift api (https://gab.pushshift.io/), the Gab.ai corpus (https://files.pushshift.io/gab/), and the Gab hate corpus  (https://osf.io/edua3/).
 
-Gab hate corpus was generated from trained annotators reading 27,000 Gab posts. Posts were categorized as Hate or not Hate and organized into the following subcategories: 
+The Gab hate corpus was generated from trained annotators reading 27,000 Gab posts. Posts were categorized as "Hate" or "not Hate" and organized into the following types and subcategories: 
 
-| Hate subcategory     | Abbreviation |
+| Hate subcategory/type     | Abbreviation |
 | ------------- |:-------------:|
 | attacks_human_dignity  | HD   | 
 | call_for_violence  | CV   | 
@@ -70,6 +70,8 @@ Of the subcategories of hateful speech by type, religion, race/ethnicity, and po
 Natural language processing techniques based on Term Frequency–Inverse Document Frequency (TFIDF) and Bidirectional Encoder Representations from Transformers (BERT) were implemented to encode the text.  
 
 ### Natural language processing models - TF-IDF
+Sklearn was used to convert a collection of posts from the dataset to a matrix of TF-IDF features. Machine learning classification models including logistic regression, random forest, and gradient boosting were implemented and represent ROC curves are shown below.
+
 
 <p align='middle'>
     <td><img src='img/roc_overlay.png' align='center' style='width: 400px;'></td>
@@ -79,7 +81,7 @@ Natural language processing techniques based on Term Frequency–Inverse Documen
 
 In this study, a pre-trained BERT neural network model was used with 12-layers, 768-hidden, 12-heads, and 110M parameters. A BERT-serving-server was installed on AWS SageMaker with to handle the heavy processing power required. (computer: 4 vCPU processor + 16 GiB memory, kernel: Python 3 TensorFlow GPU optimized).  The following parameters were used : batch size=16, max_seq_len=50, num_worker=2.
 
-
+Logistic regression was chosen for the 
 
 <p align='middle'>
     <td><img src='img/roc_overlay-BERT-TFIDF.png' align='center' style='width: 400px;'></td>
