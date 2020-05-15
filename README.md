@@ -79,9 +79,9 @@ Sklearn was used to convert a collection of posts from the dataset to a matrix o
 
 ### Natural language processing models - BERT 
 
-In this study, a pre-trained BERT neural network model was used with 12-layers, 768-hidden, 12-heads, and 110M parameters. A BERT-serving-server was installed on AWS SageMaker with to handle the heavy processing power required. (computer: 4 vCPU processor + 16 GiB memory, kernel: Python 3 TensorFlow GPU optimized).  The following parameters were used : batch size=16, max_seq_len=50, num_worker=2.
+In this study, a pre-trained BERT neural network model was used with 12-layers, 768-hidden, 12-heads, and 110M parameters. A BERT-serving-server was installed on AWS SageMaker to handle the heavy processing power required. (computer: 4 vCPU processor + 16 GiB memory, kernel: Python 3 TensorFlow GPU optimized).  The following parameters were used : batch size=16, max_seq_len=50, num_worker=2.
 
-Logistic regression was chosen for the 
+Because of its performance with TD-IDF, logistic regression was chosen as the classifier model to use with BERT as well.  Below are comparative ROC curves looking at the difference between TD-IDF and BERT text encoding.
 
 <p align='middle'>
     <td><img src='img/roc_overlay-BERT-TFIDF.png' align='center' style='width: 400px;'></td>
