@@ -8,10 +8,10 @@
 
 
 - <a href="https://github.com/b-weintraub/hate-speech#background">Background</a>  
-- <a href="https://github.com/b-weintraub/hate-speechn#Dataset">Dataset</a> 
+- <a href="https://github.com/b-weintraub/hate-speech#Dataset">Dataset</a> 
 - <a href="https://github.com/b-weintraub/hate-speech#Exploratory-Data-Analysis">Exploratory Data Analysis</a>  
-- <a href="https://github.com/b-weintraub/hate-speechn#Models">Models</a> 
-- <a href="https://github.com/b-weintraub/hate-speechn#Discussion/Next-steps">Discussion/Next steps</a>
+- <a href="https://github.com/b-weintraub/hate-speech#Models">Models</a> 
+- <a href="https://github.com/b-weintraub/hate-speech#Discussion/Next-steps">Discussion/Next steps</a>
 
 
 ## Summary
@@ -77,6 +77,10 @@ Natural language processing techniques based on Term Frequency–Inverse Documen
 
 ### Natural language processing models - BERT 
 
+BERT is a large neural network. In this study, a pre-trained BERT model was used with 12-layers, 768-hidden, 12-heads, and 110M parameters. A BERT-serving-server was installed on AWS SageMaker with to handle the heavy processing power required. (computer: 4 vCPU processor + 16 GiB memory, kernel: Python 3 TensorFlow GPU optimized).  The following parameters were used : batch size=16, max_seq_len=50, num_worker=2.
+
+
+
 <p align='middle'>
     <td><img src='img/roc_overlay-BERT-TFIDF.png' align='center' style='width: 400px;'></td>
 </p>
@@ -94,13 +98,7 @@ Natural language processing techniques based on Term Frequency–Inverse Documen
 
 ## Discussion/Next steps
 
-
-
-Logistic regression is best performing machine learning model
-
-Out of the box, BERT does not perform as well as TD-IDF, however more hyper-parameter tuning is required
-
-Next steps are to look at hate speech trends +/- 1 week around the time of Pittsburgh synagogue shooting to look for any correlation between hate speech and hate crime
+ROC scores suggest that Logistic regression is best the performing machine learning classifier model.  Out of the box, BERT does not perform as well as TD-IDF, however more hyper-parameter tuning is required.  Next steps are to look at hate speech trends +/- 1 week around the time of Pittsburgh synagogue shooting to look for any correlation between hate speech and hate crime.
 
 ## References
 
