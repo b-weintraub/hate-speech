@@ -1,4 +1,4 @@
-# Predicting hate crimes using machine learning and natural language processing
+# Predicting hate cr using machine learning and natural language processing
 
 <a href="https://www.linkedin.com/in/benweintraub-phd/">LinkedIn profile</a>
 
@@ -100,7 +100,7 @@ Because of its performance with TD-IDF, logistic regression was chosen as the cl
 
 ## Discussion/Next steps
 
-ROC scores suggest that Logistic regression is best the performing machine learning classifier model.  Out of the box, BERT does not perform as well as TD-IDF, however more hyper-parameter tuning is required.  Next steps are to look at hate speech trends +/- 1 week around the time of Pittsburgh synagogue shooting to look for any correlation between hate speech and hate crime.
+A reasonably functioning model to classify hate speech is achieved.  ROC scores suggest that Logistic regression is best the performing machine learning classifier model.  Out of the box, BERT does not perform as well as TD-IDF, however more hyper-parameter tuning is required.  Next steps are to look at hate speech trends +/- 1 week around the time of Pittsburgh synagogue shooting to look for any correlation between hate speech and hate crime.
 
 ## References
 
