@@ -1,4 +1,4 @@
-# Predicting hate cr using machine learning and natural language processing
+# Predicting hate speech using machine learning and natural language processing
 
 <a href="https://www.linkedin.com/in/benweintraub-phd/">LinkedIn profile</a>
 
