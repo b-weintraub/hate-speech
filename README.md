@@ -84,7 +84,7 @@ Sklearn was used to convert a collection of posts from the dataset to a matrix o
 
 In this study, a pre-trained BERT neural network model was used with 12-layers, 768-hidden, 12-heads, and 110M parameters. A BERT-serving-server was installed on AWS SageMaker to handle the heavy processing power required. (computer: 4 vCPU processor + 16 GiB memory, kernel: Python 3 TensorFlow GPU optimized).  The following parameters were used : batch size=16, max_seq_len=50, num_worker=2.
 
-Because of its performance with TD-IDF, logistic regression was chosen as the classifier model to use with BERT as well.  Below are comparative ROC curves looking at the difference between TD-IDF and BERT text encoding.
+Because of its performance with TF-IDF, logistic regression was chosen as the classifier model to use with BERT as well.  Below are comparative ROC curves looking at the difference between TF-IDF and BERT text encoding.
 
 <p align='middle'>
     <td><img src='img/roc_overlay-BERT-TFIDF.png' align='center' style='width: 400px;'></td>
@@ -95,15 +95,15 @@ Because of its performance with TD-IDF, logistic regression was chosen as the cl
 
 | ML classifier     | AUC score | NLP encoder  |
 | ------------- |:-------------:| -----:|
-| Logistic Regression | 0.80    | TD-IDF |
+| Logistic Regression | 0.80    | TF-IDF |
 | Logistic Regression | 0.74    |   BERT |
-| Random Forrest      | 0.57      |    TD-IDF |
-| Gradient Boosting   | 0.74      |    TD-IDF|
+| Random Forrest      | 0.57      |    TF-IDF |
+| Gradient Boosting   | 0.74      |    TF-IDF|
 
 
 ## Discussion/Next steps
 
-A reasonably functioning model to classify hate speech is achieved.  ROC scores suggest that Logistic regression is best the performing machine learning classifier model.  Out of the box, BERT does not perform as well as TD-IDF, however more hyper-parameter tuning is required.  Next steps are to look at hate speech trends +/- 1 week around the time of Pittsburgh synagogue shooting to look for any correlation between hate speech and hate crime.
+A reasonably functioning model to classify hate speech is achieved.  ROC scores suggest that logistic regression is the best performing machine learning classifier model.  Out of the box, BERT does not perform as well as TF-IDF, however more hyper-parameter tuning is required.  Next steps are to look at hate speech trends +/- 1 week around the time of Pittsburgh synagogue shooting to look for any correlation between hate speech and hate crime.
 
 ## References
 
