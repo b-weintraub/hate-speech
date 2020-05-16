@@ -1,5 +1,7 @@
 # Predicting hate speech using machine learning and natural language processing
 
+by Ben Weintraub, Ph.D.
+
 <a href="https://www.linkedin.com/in/benweintraub-phd/">LinkedIn profile</a>
 
 <a href="https://drive.google.com/open?id=1rgvkDE_13-l8qSbqcyUc2tsTnqDiLRcV77_3_jlWKC4"> Link to slide deck presentation</a>
@@ -32,6 +34,7 @@ To explore this question, data was collected from social media site Gab.com. Sta
 Gab data was collected from a variety of sources including the Gab pushshift api (https://gab.pushshift.io/), the Gab.ai corpus (https://files.pushshift.io/gab/), and the Gab hate corpus  (https://osf.io/edua3/).
 
 The Gab hate corpus was generated from trained annotators reading 27,000 Gab posts. Posts were categorized as "Hate" or "not Hate" and organized into the following types and subcategories: 
+<p align='middle'>
 
 | Hate subcategory/type     | Abbreviation |
 | ------------- |:-------------:|
@@ -46,7 +49,7 @@ The Gab hate corpus was generated from trained annotators reading 27,000 Gab pos
 | nationality   | NAT      |    
 | political_affiliation   | NAT      |    
 | mental_physical_health_status   | MPH      |  
-
+</p>
 
 
 
