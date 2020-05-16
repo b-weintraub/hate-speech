@@ -1,6 +1,6 @@
 # Predicting hate speech using machine learning and natural language processing
 
-by Ben Weintraub, Ph.D.
+Ben Weintraub, Ph.D.
 
 <a href="https://www.linkedin.com/in/benweintraub-phd/">LinkedIn profile</a>
 
