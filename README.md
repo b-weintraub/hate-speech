@@ -4,7 +4,7 @@ Ben Weintraub, Ph.D.
 
 <a href="https://www.linkedin.com/in/benweintraub-phd/">LinkedIn profile</a>
 
-<a href="https://drive.google.com/open?id=1rgvkDE_13-l8qSbqcyUc2tsTnqDiLRcV77_3_jlWKC4"> Link to slide deck presentation</a>
+
 
 ## Table of Contents
 
