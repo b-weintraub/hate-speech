@@ -97,7 +97,7 @@ Because of its performance with TF-IDF, logistic regression was chosen as the cl
 | ------------- |:-------------:| -----:|
 | Logistic Regression | 0.80    | TF-IDF |
 | Logistic Regression | 0.74    |   BERT |
-| Random Forrest      | 0.57      |    TF-IDF |
+| Random Forest      | 0.57      |    TF-IDF |
 | Gradient Boosting   | 0.74      |    TF-IDF|
 
 
